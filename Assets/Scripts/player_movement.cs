@@ -14,6 +14,7 @@ public class player_movement : MonoBehaviour
     public float speed = 6.0f;
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
+    public float pushPower = 100f;
 
     private static Vector3 verticalAxis = new Vector3(0.5f, 0.0f, 0.5f);
     private static Vector3 horizontalAxis = new Vector3(0.5f, 0.0f, -0.5f);
@@ -51,5 +52,25 @@ public class player_movement : MonoBehaviour
 
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
+    }
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        Rigidbody body = hit.collider.attachedRigidbody;
+
+        // only push non-kinematic rigidbodies
+        if (body == null || body.isKinematic) return;
+        // Don't push objects below us
+        if (hit.moveDirection.y < -0.3) return;
+
+        // Don't push up or down
+        Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
+        // HEAVE
+        //Vector3 force = pushDir * pushPower;
+        //Vector3 netForce = force - body.velocity;
+        body.velocity = pushDir * pushPower;
+        //body.AddForce(force, ForceMode.Impulse);
+        //Vector3 forcePosition = body.position - new Vector3(0, , 0);
+        //Vector3 force = pushDir * pushPower;
+        //body.AddForceAtPosition(force, forcePosition, ForceMode.VelocityChange);
     }
 }
