@@ -46,7 +46,7 @@ public class player_movement : MonoBehaviour
         // interact with object
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (heldObject == null)
+            if (heldObject == null && interactable != null)
             {
                 Pickup pickup = interactable.GetComponent<Pickup>();
                 if (pickup != null)
@@ -91,6 +91,10 @@ public class player_movement : MonoBehaviour
                 interactable = hit.collider.gameObject;
                 // if you want to highlight interactables, do it here
             }
+        }
+        else
+        {
+            interactable = null;
         }
     }
 
