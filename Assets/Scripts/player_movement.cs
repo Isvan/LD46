@@ -159,6 +159,18 @@ public class player_movement : MonoBehaviour
             hit.transform.SendMessage("SendMsg", SendMessageOptions.DontRequireReceiver);
         }
 
+        if (hit.gameObject.CompareTag("Trap"))
+        {
+            Destroy(hit.gameObject, 0);
+            Destroy(gameObject, 0);
+        }
+
+        if (hit.transform.name == "Water")
+        {
+            Destroy(gameObject, 0);
+
+        }
+
         Rigidbody rigidBody = hit.collider.attachedRigidbody;
 
         // only push non-kinematic rigidbodies

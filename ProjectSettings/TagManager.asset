@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Cheese
   - Rat
+  - Trap
   layers:
   - Default
   - TransparentFX

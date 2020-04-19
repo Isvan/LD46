@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
+
+    public string nextScene;
+
     void SendMsg()
     {
-            Debug.Log("the door has been touched"); 
-      
+           
+            SceneManager.LoadScene(nextScene);
     }
 }
