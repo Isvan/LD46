@@ -18,6 +18,8 @@ public class player_movement : MonoBehaviour
     public float interactRange;
     public Vector3 pickupPosition;
 
+    public Vector3 rotationOffSet;
+
     private static Vector3 verticalAxis = new Vector3(0.5f, 0.0f, 0.5f);
     private static Vector3 horizontalAxis = new Vector3(0.5f, 0.0f, -0.5f);
 
@@ -88,8 +90,11 @@ public class player_movement : MonoBehaviour
             moveDirection = verticalAxis * verticalInput + horizontalAxis * horizontalInput;
             moveDirection.Normalize();
             moveDirection *= speed;
-            transform.rotation = Quaternion.LookRotation(moveDirection);
-
+            if(moveDirection.magnitude > 0)
+            {
+                transform.rotation = Quaternion.LookRotation(moveDirection);
+                transform.Rotate(rotationOffSet);
+            }
             if (Input.GetButton("Jump"))
             {
                 moveDirection.y = jumpSpeed;
@@ -103,6 +108,7 @@ public class player_movement : MonoBehaviour
 
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
+        
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
