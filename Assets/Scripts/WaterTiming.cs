@@ -26,8 +26,4 @@ public class WaterTiming : MonoBehaviour
         waterSurface.Translate(0, currentTime * 0.10f, 0);
     }
 }
-//for player_movement to destroy the bossrat
-        //if (hit.gameObject.CompareTag("Trap"))
-        //{
-        //   Destroy(gameObject, 0);
-        //}
+

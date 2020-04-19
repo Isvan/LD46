@@ -851,7 +851,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431448338}
   m_LocalRotation: {x: -0.006027174, y: 0.7936996, z: -0.042127322, w: 0.6068195}
-  m_LocalPosition: {x: -10.6, y: 37.2, z: -7.8}
+  m_LocalPosition: {x: -10.6, y: 33.2, z: -7.8}
   m_LocalScale: {x: 10, y: 0.87020004, z: 10}
   m_Children: []
   m_Father: {fileID: 1555028225}
@@ -869,6 +869,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a28fbc4f16d9f45b9c52af03f174d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waterSurface: {fileID: 431448342}
+  totalTime: 30
 --- !u!114 &431448344
 MonoBehaviour:
   m_ObjectHideFlags: 0

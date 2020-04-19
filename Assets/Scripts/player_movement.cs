@@ -81,6 +81,11 @@ public class player_movement : MonoBehaviour
             hit.transform.SendMessage("SendMsg", SendMessageOptions.DontRequireReceiver);
         }
 
+        if (hit.gameObject.CompareTag("Trap") || hit.transform.name == "Water")
+        {
+            Destroy(gameObject, 0);
+        }
+
         Rigidbody rigidBody = hit.collider.attachedRigidbody;
         GameObject collidee = hit.collider.gameObject;
         Pickup pickup = collidee.GetComponent<Pickup>();
