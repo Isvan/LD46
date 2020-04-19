@@ -9,9 +9,9 @@ public class rat_pack_tracking : MonoBehaviour
     public NavMeshAgent agent;
     public int MoveSpeed = 4;
     public int Range = 10;
-    public string cheeseTag = "Cheese";
 
     float distCheese = Mathf.Infinity;
+    string cheeseTag = "Cheese";
     Transform Cheese;
     Transform target;
 
