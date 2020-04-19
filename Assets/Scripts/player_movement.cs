@@ -63,6 +63,11 @@ public class player_movement : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
+        if(hit.transform.name == "Door")
+        {
+            hit.transform.SendMessage("SendMsg", SendMessageOptions.DontRequireReceiver);
+        }
+
         Rigidbody body = hit.collider.attachedRigidbody;
 
         // only push non-kinematic rigidbodies
