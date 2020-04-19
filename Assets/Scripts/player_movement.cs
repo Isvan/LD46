@@ -69,6 +69,12 @@ public class player_movement : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
+
+        if(hit.transform.name == "Door")
+        {
+            hit.transform.SendMessage("SendMsg", SendMessageOptions.DontRequireReceiver);
+        }
+
         Rigidbody rigidBody = hit.collider.attachedRigidbody;
         GameObject collidee = hit.collider.gameObject;
         Pickup pickup = collidee.GetComponent<Pickup>();
