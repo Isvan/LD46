@@ -146,5 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 048fad066b194aa46b7568093de9909f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  BossRat: {fileID: 1759712999614598984, guid: 3e0524ef386f5234d9ea8b77fe5552a1, type: 3}
   agent: {fileID: 5628085435648559483}
+  MoveSpeed: 4
+  Range: 10
+  cheeseTag: Cheese
