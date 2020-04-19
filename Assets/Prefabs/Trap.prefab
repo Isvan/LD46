@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5628085435648559485
+--- !u!1 &443550129570186957
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,71 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5628085435648559481}
-  - component: {fileID: 5628085435648559483}
-  - component: {fileID: 5628085435648559480}
-  - component: {fileID: 5628085435648559487}
-  - component: {fileID: 5628085435648559486}
-  - component: {fileID: 5628085435648559482}
-  - component: {fileID: 5628085435648559460}
+  - component: {fileID: 443550129570186956}
+  - component: {fileID: 443550129570186951}
+  - component: {fileID: 443550129570186944}
+  - component: {fileID: 443550129570186945}
+  - component: {fileID: 443550129570186947}
+  - component: {fileID: 443550129570186946}
   m_Layer: 8
-  m_Name: Rat
-  m_TagString: Rat
+  m_Name: Trap
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5628085435648559481
+--- !u!4 &443550129570186956
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5628085435648559485}
+  m_GameObject: {fileID: 443550129570186957}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.655552, y: -7.779331, z: -0.1482315}
+  m_LocalPosition: {x: 0.9883115, y: -5.0759106, z: 13.2}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!195 &5628085435648559483
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5628085435648559485}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 8
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 2
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!33 &5628085435648559480
+--- !u!33 &443550129570186951
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5628085435648559485}
+  m_GameObject: {fileID: 443550129570186957}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &5628085435648559487
+--- !u!23 &443550129570186944
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5628085435648559485}
+  m_GameObject: {fileID: 443550129570186957}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -105,48 +82,47 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5628085435648559486
+--- !u!65 &443550129570186945
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5628085435648559485}
+  m_GameObject: {fileID: 443550129570186957}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &5628085435648559482
+--- !u!54 &443550129570186947
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5628085435648559485}
+  m_GameObject: {fileID: 443550129570186957}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5628085435648559460
+--- !u!114 &443550129570186946
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5628085435648559485}
+  m_GameObject: {fileID: 443550129570186957}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 048fad066b194aa46b7568093de9909f, type: 3}
+  m_Script: {fileID: 11500000, guid: b7a7579fd8145ec47b1edbfd0fa7a1b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BossRat: {fileID: 0}
-  agent: {fileID: 5628085435648559483}
-  MoveSpeed: 4
-  Range: 10
+  Tag: Rat
+  interval: 0
+  destroyTagObject: 1
