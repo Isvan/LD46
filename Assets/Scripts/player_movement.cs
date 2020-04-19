@@ -15,26 +15,64 @@ public class player_movement : MonoBehaviour
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
     public float pushPower = 100f;
+    public float interactRange;
     public Vector3 pickupPosition;
 
     private static Vector3 verticalAxis = new Vector3(0.5f, 0.0f, 0.5f);
     private static Vector3 horizontalAxis = new Vector3(0.5f, 0.0f, -0.5f);
 
     private Vector3 moveDirection = Vector3.zero;
-    private GameObject pickedUpObject;
+    private GameObject pickedUpObject; // object the rat is holding
+    private GameObject interactable; // If <interact> is pressed, this is what is interacted with
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         pickedUpObject = null;
+        interactable = null;
     }
 
     void Update()
     {
         MovePlayer();
+        // picked up object follows player
         if (pickedUpObject != null)
         {
             pickedUpObject.transform.position = transform.position + pickupPosition;
+        }
+
+        // interact with object
+        if (Input.GetKeyDown("e"))
+        {
+            if (pickedUpObject != null)
+            {
+                PhysicsObject obj = interactable.GetComponent<PhysicsObject>();
+                if (obj != null && obj.isPullable == true)
+                {
+                    //AttachRope();
+                }
+            }
+            else 
+            {
+                if (interactable.GetComponent<Pickup>() != null)
+                {
+                    // place pickup on top of the player
+                    interactable.transform.position = transform.position + pickupPosition;
+                    pickedUpObject = interactable;
+                }
+            }
+        }
+
+        // update nearest interactable
+        RaycastHit hit;
+        Ray ray = new Ray(transform.position, transform.forward);
+        if(Physics.Raycast(ray, out hit, interactRange))
+        {
+            if (hit.collider != null)
+            {
+                interactable = hit.collider.gameObject;
+                // highlight object and stuff here
+            }
         }
     }
 
@@ -81,9 +119,9 @@ public class player_movement : MonoBehaviour
 
         if (pickup != null && pickedUpObject == null)
         {
-            // place pickup on top of the player
-            collidee.transform.position = transform.position + pickupPosition;
-            pickedUpObject = collidee;
+            //// place pickup on top of the player
+            //collidee.transform.position = transform.position + pickupPosition;
+            //pickedUpObject = collidee;
             return;
         }
 
