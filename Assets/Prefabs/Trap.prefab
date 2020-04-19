@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 443550129570186946}
   m_Layer: 8
   m_Name: Trap
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,3 +126,4 @@ MonoBehaviour:
   Tag: Rat
   interval: 0
   destroyTagObject: 1
+  destroySelf: 0
