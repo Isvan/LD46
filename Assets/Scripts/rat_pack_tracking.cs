@@ -9,10 +9,11 @@ public class rat_pack_tracking : MonoBehaviour
     public NavMeshAgent agent;
     public int MoveSpeed = 4;
     public int Range = 10;
-    public string cheeseTag = "Cheese";
 
     float distCheese = Mathf.Infinity;
+    string cheeseTag = "Cheese";
     Transform Cheese;
+    Transform target;
 
     void Start()
     {
@@ -39,21 +40,20 @@ public class rat_pack_tracking : MonoBehaviour
         if(shortestDist <= Range)
         {
             Cheese = nearestCheese.transform;
-            distCheese = shortestDist;
         }
+        distCheese = shortestDist;
     }
 
     void Update()
     {
-        Transform target = BossRat;
+        target = BossRat;
         float distBossRat = Vector3.Distance(transform.position, BossRat.position);
 
         if(distCheese < Range)
         {
-            if (Cheese == null) {
-                return;
+            if (Cheese != null) {
+                target = Cheese;
             } 
-            target = Cheese;
         }
 
         if (Vector3.Distance(transform.position, target.position) <= Range)
@@ -67,5 +67,10 @@ public class rat_pack_tracking : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, Range);
+        if(target != null)
+        {
+            Gizmos.DrawCube(target.transform.position, new Vector3(3.0f, 0.5f, 1.0f));
+
+        }
     }
 }
