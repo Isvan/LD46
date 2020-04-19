@@ -10,6 +10,8 @@ public class rat_pack_tracking : MonoBehaviour
     public int MoveSpeed = 4;
     public int Range = 10;
 
+    public Vector3 rotationOffset;
+
     float distCheese = Mathf.Infinity;
     string cheeseTag = "Cheese";
     Transform Cheese;
@@ -60,6 +62,7 @@ public class rat_pack_tracking : MonoBehaviour
         {
             agent.SetDestination(target.position);
             transform.LookAt(target);
+            transform.Rotate(rotationOffset);
         }
     }
 
