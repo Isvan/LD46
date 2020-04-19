@@ -48,7 +48,7 @@ public class rat_pack_tracking : MonoBehaviour
         Transform target = BossRat;
         float distBossRat = Vector3.Distance(transform.position, BossRat.position);
 
-        if(distBossRat > Range || distBossRat > distCheese)
+        if(distCheese < Range)
         {
             if (Cheese == null) {
                 return;
