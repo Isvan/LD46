@@ -20,13 +20,20 @@ public class player_movement : MonoBehaviour
     private static Vector3 horizontalAxis = new Vector3(0.5f, 0.0f, -0.5f);
 
     private Vector3 moveDirection = Vector3.zero;
+    private LevelHandler levelHandler;
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        levelHandler = Camera.main.GetComponent<LevelHandler>();
     }
 
     void Update()
+    {
+        MovePlayer();
+    }
+
+    private void MovePlayer()
     {
         if (characterController.isGrounded)
         {
@@ -53,6 +60,7 @@ public class player_movement : MonoBehaviour
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
     }
+
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         Rigidbody body = hit.collider.attachedRigidbody;
