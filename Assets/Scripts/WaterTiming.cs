@@ -23,7 +23,7 @@ public class WaterTiming : MonoBehaviour
         {
             return;
         }
-        waterSurface.Translate(0, currentTime * 0.10f, 0);
+        waterSurface.Translate(0, currentTime * 0.01f, 0);
     }
 }
 

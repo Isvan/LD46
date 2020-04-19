@@ -870,7 +870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterSurface: {fileID: 431448342}
-  totalTime: 30
+  totalTime: 0
 --- !u!114 &431448344
 MonoBehaviour:
   m_ObjectHideFlags: 0
