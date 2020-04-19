@@ -10,17 +10,25 @@ public class rat_pack_tracking : MonoBehaviour
     public int MoveSpeed = 4;
     public int Range = 10;
 
+    public Vector3 rotationOffset;
+    public Vector3 wanderStepRange;
+
     float distCheese = Mathf.Infinity;
     string cheeseTag = "Cheese";
     Transform Cheese;
     Transform target;
 
+    public float randTargetAcquireDistance = 5;
+    Vector3 randTarget;
+    
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         InvokeRepeating("UpdateCheeseTarget", 0f, 0.5f);
+        randTarget = transform.position + new Vector3(Random.Range(-wanderStepRange.x, wanderStepRange.x), Random.Range(-wanderStepRange.y, wanderStepRange.y), Random.Range(-wanderStepRange.z, wanderStepRange.z));
+
     }
-     
+
     void UpdateCheeseTarget()
     {
         GameObject[] cheeses = GameObject.FindGameObjectsWithTag(cheeseTag);
@@ -47,8 +55,7 @@ public class rat_pack_tracking : MonoBehaviour
     void Update()
     {
         target = BossRat;
-        float distBossRat = Vector3.Distance(transform.position, BossRat.position);
-
+       
         if(distCheese < Range)
         {
             if (Cheese != null) {
@@ -58,9 +65,29 @@ public class rat_pack_tracking : MonoBehaviour
 
         if (Vector3.Distance(transform.position, target.position) <= Range)
         {
-            agent.SetDestination(target.position);
             transform.LookAt(target);
+            agent.SetDestination(target.position);
+
         }
+        else
+        {
+
+            if(Vector3.Distance(transform.position,randTarget) <= randTargetAcquireDistance || !agent.hasPath)
+            {
+
+                randTarget = transform.position + new Vector3(Random.Range(-wanderStepRange.x, wanderStepRange.x), Random.Range(-wanderStepRange.y, wanderStepRange.y), Random.Range(-wanderStepRange.z, wanderStepRange.z));
+               
+            }
+
+            transform.LookAt(randTarget);
+            agent.SetDestination(randTarget);
+            //target.position = randTarget;
+        }
+
+       
+        transform.Rotate(rotationOffset);
+        
+
     }
 
     private void OnDrawGizmosSelected()
@@ -70,6 +97,7 @@ public class rat_pack_tracking : MonoBehaviour
         if(target != null)
         {
             Gizmos.DrawCube(target.transform.position, new Vector3(3.0f, 0.5f, 1.0f));
+            Gizmos.DrawCube(randTarget, new Vector3(0.5f, 0.5f, 1.0f));
 
         }
     }
