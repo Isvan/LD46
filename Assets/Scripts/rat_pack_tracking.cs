@@ -5,11 +5,12 @@ using UnityEngine.UI;
 using UnityEngine.AI;
 public class rat_pack_tracking : MonoBehaviour
 {
+    public GameObject bloodSplat;
     public Transform BossRat;
     public NavMeshAgent agent;
+    public float bloodSplatLifetime;
     public int MoveSpeed = 4;
     public int Range = 10;
-
     public Vector3 rotationOffset;
     public Vector3 wanderStepRange;
 
@@ -89,7 +90,11 @@ public class rat_pack_tracking : MonoBehaviour
         
 
     }
-
+    private void OnDestroy()
+    {
+        Debug.Log("rat died");
+        BloodSplatter(gameObject);
+    }
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
@@ -100,5 +105,15 @@ public class rat_pack_tracking : MonoBehaviour
             Gizmos.DrawCube(randTarget, new Vector3(0.5f, 0.5f, 1.0f));
 
         }
+    }
+
+    private void BloodSplatter(GameObject rat)
+    {
+        Vector3 ratPos = rat.transform.position;
+        Quaternion ratRot = rat.transform.rotation;
+
+        GameObject blood = Instantiate(bloodSplat, ratPos, ratRot);
+        Destroy(blood, bloodSplatLifetime);
+
     }
 }
