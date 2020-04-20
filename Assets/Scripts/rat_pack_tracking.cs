@@ -96,7 +96,6 @@ public class rat_pack_tracking : MonoBehaviour
     }
     private void OnDestroy()
     {
-        Debug.Log("rat died");
         BloodSplatter(gameObject);
     }
     private void OnDrawGizmosSelected()

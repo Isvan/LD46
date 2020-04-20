@@ -10,7 +10,6 @@ public class RoomText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(NextLevel.carryOverRats);
         int room = NextLevel.roomNum;
         text = GetComponent<Text>();
         text.text = string.Format("Room {0} of 10", room);

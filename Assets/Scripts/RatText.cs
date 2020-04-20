@@ -9,7 +9,6 @@ public class RatText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(NextLevel.carryOverRats);
         int rats = NextLevel.carryOverRats;
         text = GetComponent<Text>();
         text.text = string.Format("Saved {0} rats", rats);
