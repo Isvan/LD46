@@ -27,7 +27,6 @@ public class NextLevel : MonoBehaviour
             roomNum++;
             int totalFollowingRats = 0;
             GameObject[] rats = GameObject.FindGameObjectsWithTag(ratsTag);
-            print(rats.Length);
             foreach (GameObject rat in rats)
             {
                 rat_pack_tracking ratTracker = rat.GetComponent<rat_pack_tracking>();
@@ -37,17 +36,19 @@ public class NextLevel : MonoBehaviour
                 }
             }
             carryOverRats = totalFollowingRats;
-
             nextSceneStatic = nextScene;
             if (isLastLevel)
             {
                 SceneManager.LoadScene(victory);
                 return;
             }
+            Debug.Log(transitionLevel);
             SceneManager.LoadScene(transitionLevel);
         }
         else // door is in the transition level
         {
+            Debug.Log(nextSceneStatic);
+
             SceneManager.LoadScene(nextSceneStatic);
         }
     }
