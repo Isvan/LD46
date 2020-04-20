@@ -29,7 +29,6 @@ public class NextLevel : MonoBehaviour
             }       
         carryOverRats = totalFollowingRats;
         }
-        Debug.Log(nextScene);
         SceneManager.LoadScene(nextScene);
     }
 }
