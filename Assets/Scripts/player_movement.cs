@@ -57,7 +57,7 @@ public class player_movement : MonoBehaviour
         MovePlayer();
 
         // interact with object
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             if (heldObject == null && interactable != null)
             {
@@ -84,7 +84,7 @@ public class player_movement : MonoBehaviour
         }
 
         // drop held object
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             if (objectIsLight)
             {

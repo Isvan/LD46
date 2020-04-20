@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class NextLevel : MonoBehaviour
 {
     public static int carryOverRats = 0;
+    public static string nextLevel;
 
     public string nextScene;
+    public bool useStaticNextScene;
     public bool updateCarryOver;
 
     private string ratsTag = "Rat";
