@@ -180,6 +180,7 @@ public class player_movement : MonoBehaviour
         {
             Destroy(hit.gameObject, 0);
             Destroy(gameObject, 0);
+            Camera.main.GetComponent<LevelHandler>().ResetLevel();
         }
 
         if (hit.transform.name == "Water")
