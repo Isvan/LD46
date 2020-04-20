@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: fbe9842eec52c294db80b2457fb13f55, type: 2}
 --- !u!1001 &19388820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2712,6 +2712,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -3.584
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167124941314731098, guid: 94e37d3e0d18e5c4fb59e79acd87e426,
+        type: 3}
+      propertyPath: totalTime
+      value: 600
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94e37d3e0d18e5c4fb59e79acd87e426, type: 3}
