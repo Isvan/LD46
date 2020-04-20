@@ -154,6 +154,6 @@ MonoBehaviour:
   MoveSpeed: 4
   Range: 8
   rotationOffset: {x: 270, y: 90, z: 0}
-  wanderStepRange: {x: 5, y: 0, z: 5}
+  wanderStepRange: {x: 10, y: 0, z: 10}
   randomPlaceLimits: {fileID: 0}
   randTargetAcquireDistance: 5

@@ -13,12 +13,16 @@ public class NextLevel : MonoBehaviour
 
     public string nextScene;
     public bool isLevelDoor;
+    public bool isLastLevel;
+
 
     private string ratsTag = "Rat";
+    private string victory = "Victory";
+
 
     void SendMsg()
     {
-        if (isLevelDoor)
+        if (isLevelDoor || isLastLevel)
         {
             roomNum++;
             int totalFollowingRats = 0;
@@ -35,6 +39,11 @@ public class NextLevel : MonoBehaviour
             carryOverRats = totalFollowingRats;
 
             nextSceneStatic = nextScene;
+            if (isLastLevel)
+            {
+                SceneManager.LoadScene(victory);
+                return;
+            }
             SceneManager.LoadScene(transitionLevel);
         }
         else // door is in the transition level
