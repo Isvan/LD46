@@ -1477,12 +1477,12 @@ PrefabInstance:
     - target: {fileID: 5628085435648559460, guid: 2ffb20c029ea9344f83bf3617992345b,
         type: 3}
       propertyPath: wanderStepRange.x
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5628085435648559460, guid: 2ffb20c029ea9344f83bf3617992345b,
         type: 3}
       propertyPath: wanderStepRange.z
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5628085435648559460, guid: 2ffb20c029ea9344f83bf3617992345b,
         type: 3}
@@ -1563,21 +1563,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AgentTypeID
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5628085435648559483, guid: 2ffb20c029ea9344f83bf3617992345b,
-        type: 3}
-      propertyPath: m_AutoBraking
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5628085435648559483, guid: 2ffb20c029ea9344f83bf3617992345b,
-        type: 3}
-      propertyPath: m_AngularSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5628085435648559483, guid: 2ffb20c029ea9344f83bf3617992345b,
-        type: 3}
-      propertyPath: m_Acceleration
-      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5628085435648559485, guid: 2ffb20c029ea9344f83bf3617992345b,
         type: 3}
