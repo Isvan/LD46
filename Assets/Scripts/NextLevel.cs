@@ -6,17 +6,18 @@ using UnityEngine.SceneManagement;
 public class NextLevel : MonoBehaviour
 {
     public static int carryOverRats = 0;
-    public static string nextLevel;
+    public static string nextSceneStatic;
+
+    public static string transitionLevel = "LevelTransition";
 
     public string nextScene;
-    public bool useStaticNextScene;
-    public bool updateCarryOver;
+    public bool isLevelDoor;
 
     private string ratsTag = "Rat";
 
     void SendMsg()
     {
-        if (updateCarryOver)
+        if (isLevelDoor)
         { 
             int totalFollowingRats = 0;
             GameObject[] rats = GameObject.FindGameObjectsWithTag(ratsTag);
@@ -28,10 +29,15 @@ public class NextLevel : MonoBehaviour
                 {
                     totalFollowingRats++;
                 }
-            }       
-        carryOverRats = totalFollowingRats;
+            }
+            carryOverRats = totalFollowingRats;
+
+            nextSceneStatic = nextScene;
+            SceneManager.LoadScene(transitionLevel);
         }
-        Debug.Log(nextScene);
-        SceneManager.LoadScene(nextScene);
+        else // door is in the transition level
+        {
+            SceneManager.LoadScene(nextSceneStatic);
+        }
     }
 }

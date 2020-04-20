@@ -22,8 +22,8 @@ public class player_movement : MonoBehaviour
 
     public GameObject ratPrefab;
 
-    private static Vector3 verticalAxis = new Vector3(0.5f, 0.0f, 0.5f);
-    private static Vector3 horizontalAxis = new Vector3(0.5f, 0.0f, -0.5f);
+    private Vector3 verticalAxis;
+    private Vector3 horizontalAxis;
     private Vector3 moveDirection = Vector3.zero;
 
     private GameObject heldObject; // object the rat is holding
@@ -50,6 +50,10 @@ public class player_movement : MonoBehaviour
                 ratScript.BossRat = this.transform;
             }
         }
+
+        Camera mainCam = Camera.main;
+        verticalAxis = new Vector3(mainCam.transform.forward.x, 0, mainCam.transform.forward.z).normalized;
+        horizontalAxis = new Vector3(mainCam.transform.right.x, 0, mainCam.transform.right.z).normalized;
     }
 
     void Update()
