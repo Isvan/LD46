@@ -12,7 +12,7 @@ public class RatText : MonoBehaviour
         Debug.Log(NextLevel.carryOverRats);
         int rats = NextLevel.carryOverRats;
         text = GetComponent<Text>();
-        text.text = string.Format("Saved {0}/10 rats", rats);
+        text.text = string.Format("Saved {0} rats", rats);
 
 
     }
