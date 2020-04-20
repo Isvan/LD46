@@ -21,6 +21,7 @@ public class player_movement : MonoBehaviour
     public Vector3 rotationOffSet;
 
     public GameObject ratPrefab;
+    public BoxCollider playableArea;
 
     private Vector3 verticalAxis;
     private Vector3 horizontalAxis;
@@ -48,6 +49,7 @@ public class player_movement : MonoBehaviour
                 GameObject newRat = Instantiate(ratPrefab, transform.position, ratPrefab.transform.rotation);
                 rat_pack_tracking ratScript = newRat.GetComponent<rat_pack_tracking>();
                 ratScript.BossRat = this.transform;
+                ratScript.randomPlaceLimits = playableArea;
             }
         }
 
