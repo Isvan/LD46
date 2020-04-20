@@ -6,8 +6,8 @@ public class CollisionDespawn : MonoBehaviour
 {
     public string Tag;
     public float interval;
-    public bool destroyTagObject = true;
-    public bool destroySelf = false;
+    public bool destroyTagObject;
+    public bool destroySelf;
     private void OnCollisionEnter(Collision collision)
     {
 
@@ -15,8 +15,10 @@ public class CollisionDespawn : MonoBehaviour
         {
             if (destroyTagObject == true)
             {
+
                 Destroy(collision.gameObject, interval);
             }
+
 
             if (destroySelf == true)
             {
