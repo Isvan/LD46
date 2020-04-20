@@ -2402,7 +2402,7 @@ PrefabInstance:
     - target: {fileID: 6088195414640052591, guid: 8d6379cd7f320174fb2417bf0f1cb7c9,
         type: 3}
       propertyPath: destroyTagObject
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d6379cd7f320174fb2417bf0f1cb7c9, type: 3}
@@ -2889,7 +2889,7 @@ PrefabInstance:
     - target: {fileID: 4721245051415937216, guid: 068e919a1938c8d47adb185ed9b825bf,
         type: 3}
       propertyPath: nextScene
-      value: Level1
+      value: LevelTransition
       objectReference: {fileID: 0}
     - target: {fileID: 4721245051415937222, guid: 068e919a1938c8d47adb185ed9b825bf,
         type: 3}
@@ -5863,7 +5863,7 @@ PrefabInstance:
     - target: {fileID: 6088195414640052591, guid: 8d6379cd7f320174fb2417bf0f1cb7c9,
         type: 3}
       propertyPath: destroyTagObject
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d6379cd7f320174fb2417bf0f1cb7c9, type: 3}
