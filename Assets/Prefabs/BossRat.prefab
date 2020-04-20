@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1759712999614598982}
   - component: {fileID: 1759712999614598989}
   - component: {fileID: 1759712999614598978}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BossRat
   m_TagString: Rat
   m_Icon: {fileID: 0}
@@ -111,10 +111,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9435128212548e64bb7a24fc1ae08b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 6
   jumpSpeed: 8
   gravity: 20
   pushPower: 2
-  interactRange: 2
+  interactRange: 0
   pickupPosition: {x: 0, y: 0, z: 0}
   rotationOffSet: {x: -90, y: 90, z: 0}
+  ratPrefab: {fileID: 5628085435648559485, guid: 2ffb20c029ea9344f83bf3617992345b,
+    type: 3}
