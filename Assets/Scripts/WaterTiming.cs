@@ -7,10 +7,11 @@ public class WaterTiming : MonoBehaviour
     public Transform waterSurface;
     public float totalTime;
     float currentTime = 0;
-    
+    float ratio;
     // Start is called before the first frame update
     void Start()
     {
+       ratio = 30f/totalTime;
 
     }
 
@@ -22,7 +23,7 @@ public class WaterTiming : MonoBehaviour
         {
             return;
         }
-        waterSurface.Translate(0, 0.005f, 0);
+        waterSurface.Translate(0, 0.025f * ratio, 0);
     }
 }
 
