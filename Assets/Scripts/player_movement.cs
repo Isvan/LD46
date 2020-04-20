@@ -117,6 +117,11 @@ public class player_movement : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        Camera.main.GetComponent<LevelHandler>().ResetLevel();
+    }
+
     private void MovePlayer()
     {
         if (characterController.isGrounded)
