@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Release/Levels/Level1.unity
     guid: 49ea3ade3ce6f484b82b5783ecafda27
   - enabled: 1
+    path: Assets/Scenes/Release/MainMenu.unity
+    guid: 2602428d69f590746bc225a6db103d30
+  - enabled: 1
+    path: Assets/Scenes/Release/Credits.unity
+    guid: 53347009889139d42b2ee86be56ba76b
+  - enabled: 1
     path: Assets/Scenes/Release/Levels/LevelTransition.unity
     guid: 592ad613e2f86df44b3a5867b1f59bde
   m_configObjects: {}
