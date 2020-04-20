@@ -5,12 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
+    public static int carryOverRats = 0;
 
     public string nextScene;
+    public bool updateCarryOver;
+
+    private string ratsTag = "Rat";
 
     void SendMsg()
     {
-           
-            SceneManager.LoadScene(nextScene);
+        if (updateCarryOver)
+        { 
+            int totalFollowingRats = 0;
+            GameObject[] rats = GameObject.FindGameObjectsWithTag(ratsTag);
+            foreach (GameObject rat in rats)
+            {
+                rat_pack_tracking ratTracker = rat.GetComponent<rat_pack_tracking>();
+                if (ratTracker != null && ratTracker.InBossRange())
+                {
+                    totalFollowingRats++;
+                }
+        }
+        carryOverRats = totalFollowingRats;
+    }
+        SceneManager.LoadScene(nextScene);
     }
 }

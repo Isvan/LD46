@@ -71,6 +71,7 @@ public class rat_pack_tracking : MonoBehaviour
         }
         else
         {
+            target = null;
 
             if(Vector3.Distance(transform.position,randTarget) <= randTargetAcquireDistance || !agent.hasPath)
             {
@@ -100,5 +101,10 @@ public class rat_pack_tracking : MonoBehaviour
             Gizmos.DrawCube(randTarget, new Vector3(0.5f, 0.5f, 1.0f));
 
         }
+    }
+
+    public bool InBossRange()
+    {
+        return (Vector3.Distance(transform.position, BossRat.position) <= Range);
     }
 }

@@ -20,6 +20,8 @@ public class player_movement : MonoBehaviour
 
     public Vector3 rotationOffSet;
 
+    public GameObject ratPrefab;
+
     private static Vector3 verticalAxis = new Vector3(0.5f, 0.0f, 0.5f);
     private static Vector3 horizontalAxis = new Vector3(0.5f, 0.0f, -0.5f);
     private Vector3 moveDirection = Vector3.zero;
@@ -160,7 +162,7 @@ public class player_movement : MonoBehaviour
 
         if(hit.transform.name == "Door")
         {
-            hit.transform.SendMessage("SendMsg", SendMessageOptions.DontRequireReceiver);
+            hit.transform.SendMessage("SendMsg", true, SendMessageOptions.DontRequireReceiver);
         }
 
         if (hit.gameObject.CompareTag("Trap"))
