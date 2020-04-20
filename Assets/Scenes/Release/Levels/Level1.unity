@@ -410,6 +410,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1759712999614598978, guid: 3e0524ef386f5234d9ea8b77fe5552a1,
+        type: 3}
+      propertyPath: playableArea
+      value: 
+      objectReference: {fileID: 212413597}
     - target: {fileID: 1759712999614598979, guid: 3e0524ef386f5234d9ea8b77fe5552a1,
         type: 3}
       propertyPath: m_Name
@@ -556,6 +561,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a74960aa2b051d479b871540ed607f8, type: 3}
+--- !u!65 &212413597 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 6174267817906655953, guid: 1a74960aa2b051d479b871540ed607f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 212413596}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &262660268
 PrefabInstance:
   m_ObjectHideFlags: 0
