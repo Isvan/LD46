@@ -146,8 +146,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 048fad066b194aa46b7568093de9909f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bloodSplat: {fileID: 1255193910823710631, guid: f4899916e58412449a4fa4d6116e49fb,
+    type: 3}
   BossRat: {fileID: 0}
   agent: {fileID: 5628085435648559483}
+  bloodSplatLifetime: 0
   MoveSpeed: 4
   Range: 8
   rotationOffset: {x: 270, y: 90, z: 0}

@@ -116,9 +116,11 @@ public class rat_pack_tracking : MonoBehaviour
     private void BloodSplatter(GameObject rat)
     {
         Vector3 ratPos = rat.transform.position;
-        Quaternion ratRot = rat.transform.rotation;
+        Quaternion splatRot = new Quaternion();
+        splatRot.Set(20, 0, 0, 0);
 
-        GameObject blood = Instantiate(bloodSplat, ratPos, ratRot);
+        GameObject blood = Instantiate(bloodSplat, ratPos, splatRot);
+        blood.transform.Rotate(90, 0, 0);
         Destroy(blood, bloodSplatLifetime);
     }
 }
