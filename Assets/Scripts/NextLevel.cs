@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class NextLevel : MonoBehaviour
 {
     public static int carryOverRats = 0;
+    public static int roomNum = 0;
     public static string nextSceneStatic;
 
     public static string transitionLevel = "LevelTransition";
@@ -18,7 +19,8 @@ public class NextLevel : MonoBehaviour
     void SendMsg()
     {
         if (isLevelDoor)
-        { 
+        {
+            roomNum++;
             int totalFollowingRats = 0;
             GameObject[] rats = GameObject.FindGameObjectsWithTag(ratsTag);
             print(rats.Length);
