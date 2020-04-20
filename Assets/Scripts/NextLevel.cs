@@ -18,6 +18,7 @@ public class NextLevel : MonoBehaviour
         { 
             int totalFollowingRats = 0;
             GameObject[] rats = GameObject.FindGameObjectsWithTag(ratsTag);
+            print(rats.Length);
             foreach (GameObject rat in rats)
             {
                 rat_pack_tracking ratTracker = rat.GetComponent<rat_pack_tracking>();

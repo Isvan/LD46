@@ -115,5 +115,8 @@ MonoBehaviour:
   jumpSpeed: 8
   gravity: 20
   pushPower: 2
+  interactRange: 0
   pickupPosition: {x: 0, y: 0, z: 0}
   rotationOffSet: {x: -90, y: 90, z: 0}
+  ratPrefab: {fileID: 5628085435648559485, guid: 2ffb20c029ea9344f83bf3617992345b,
+    type: 3}

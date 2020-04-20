@@ -39,6 +39,17 @@ public class player_movement : MonoBehaviour
         heldObject = null;
         interactable = null;
         anchorRotation = false;
+
+        if (ratPrefab != null)
+        {
+            int carriedRats = NextLevel.carryOverRats;
+            for (int i = 0; i < carriedRats; i++)
+            {
+                GameObject newRat = Instantiate(ratPrefab, transform.position, ratPrefab.transform.rotation);
+                rat_pack_tracking ratScript = newRat.GetComponent<rat_pack_tracking>();
+                ratScript.BossRat = this.transform;
+            }
+        }
     }
 
     void Update()

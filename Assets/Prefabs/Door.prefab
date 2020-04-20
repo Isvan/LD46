@@ -123,3 +123,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edba00240e484a7498e56d5d087037ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene: 
+  updateCarryOver: 1
