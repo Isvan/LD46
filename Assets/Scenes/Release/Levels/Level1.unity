@@ -2124,7 +2124,11 @@ PrefabInstance:
         type: 3}
       propertyPath: nextScene
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: Level2
+=======
+      value: Victory
+>>>>>>> e23c9d21c18ffa2b06948ae69f1abab5542c81de
 =======
       value: Victory
 >>>>>>> e23c9d21c18ffa2b06948ae69f1abab5542c81de
