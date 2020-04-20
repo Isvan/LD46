@@ -150,7 +150,7 @@ MonoBehaviour:
     type: 3}
   BossRat: {fileID: 1759712999614598984, guid: 3e0524ef386f5234d9ea8b77fe5552a1, type: 3}
   agent: {fileID: 5628085435648559483}
-  bloodSplatLifetime: 0
+  bloodSplatLifetime: 5
   MoveSpeed: 4
   Range: 8
   rotationOffset: {x: 270, y: 90, z: 0}
