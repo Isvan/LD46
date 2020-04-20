@@ -1759,11 +1759,16 @@ PrefabInstance:
     - target: {fileID: 4721245051415937216, guid: 068e919a1938c8d47adb185ed9b825bf,
         type: 3}
       propertyPath: nextScene
-      value: Level0
+      value: Victory
       objectReference: {fileID: 0}
     - target: {fileID: 4721245051415937216, guid: 068e919a1938c8d47adb185ed9b825bf,
         type: 3}
       propertyPath: isLevelDoor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721245051415937216, guid: 068e919a1938c8d47adb185ed9b825bf,
+        type: 3}
+      propertyPath: isLastLevel
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4721245051415937222, guid: 068e919a1938c8d47adb185ed9b825bf,
