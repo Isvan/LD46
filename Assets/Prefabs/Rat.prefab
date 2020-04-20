@@ -44,7 +44,7 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5628085435648559485}
   m_Enabled: 1
-  m_AgentTypeID: -1372625422
+  m_AgentTypeID: 0
   m_Radius: 0.01
   m_Speed: 8
   m_Acceleration: 8
@@ -146,10 +146,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 048fad066b194aa46b7568093de9909f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BossRat: {fileID: 0}
+  bloodSplat: {fileID: 0}
+  BossRat: {fileID: 1759712999614598984, guid: 3e0524ef386f5234d9ea8b77fe5552a1, type: 3}
   agent: {fileID: 5628085435648559483}
+  bloodSplatLifetime: 0
   MoveSpeed: 4
   Range: 8
   rotationOffset: {x: 270, y: 90, z: 0}
-  wanderStepRange: {x: 0, y: 0, z: 0}
+  wanderStepRange: {x: 10, y: 0, z: 10}
   randTargetAcquireDistance: 5
