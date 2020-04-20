@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4694936696509161428}
   - component: {fileID: 7319437603597060199}
   - component: {fileID: -4821563041372167680}
+  - component: {fileID: 5178652298192726049}
   m_Layer: 0
   m_Name: Barrel
   m_TagString: Untagged
@@ -138,3 +139,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32acdb4d41e7bf546b3fa12113dd8b77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPushable: 1
+  isPullable: 1
+--- !u!208 &5178652298192726049
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6731063537067810406}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.010000001, z: 0.012}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0.002}
+  m_TimeToStationary: 0.5

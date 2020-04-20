@@ -14,6 +14,8 @@ public class rat_pack_tracking : MonoBehaviour
     public Vector3 rotationOffset;
     public Vector3 wanderStepRange;
 
+    public BoxCollider randomPlaceLimits;
+
     float distCheese = Mathf.Infinity;
     string cheeseTag = "Cheese";
     Transform Cheese;
@@ -53,6 +55,7 @@ public class rat_pack_tracking : MonoBehaviour
         distCheese = shortestDist;
     }
 
+
     void Update()
     {
         target = BossRat;
@@ -77,8 +80,8 @@ public class rat_pack_tracking : MonoBehaviour
             if(Vector3.Distance(transform.position,randTarget) <= randTargetAcquireDistance || !agent.hasPath)
             {
 
-                randTarget = transform.position + new Vector3(Random.Range(-wanderStepRange.x, wanderStepRange.x), Random.Range(-wanderStepRange.y, wanderStepRange.y), Random.Range(-wanderStepRange.z, wanderStepRange.z));
-               
+                randTarget = randomPlaceLimits.ClosestPoint(transform.position + new Vector3(Random.Range(-wanderStepRange.x, wanderStepRange.x), Random.Range(-wanderStepRange.y, wanderStepRange.y), Random.Range(-wanderStepRange.z, wanderStepRange.z)));
+              
             }
 
             transform.LookAt(randTarget);
