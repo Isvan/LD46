@@ -2565,7 +2565,7 @@ GameObject:
   - component: {fileID: 6167124941314731098}
   m_Layer: 0
   m_Name: WaterManager
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2678,7 +2678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterSurface: {fileID: 3490206267780419957}
-  totalTime: 0
+  totalTime: 600
 --- !u!1 &3504597205305470079
 GameObject:
   m_ObjectHideFlags: 0
