@@ -119,7 +119,7 @@ public class player_movement : MonoBehaviour
 
     private void OnDestroy()
     {
-        Camera.main.GetComponent<LevelHandler>().ResetLevel();
+       
     }
 
     private void MovePlayer()
@@ -189,15 +189,15 @@ public class player_movement : MonoBehaviour
 
         if (hit.gameObject.CompareTag("Trap"))
         {
-            Destroy(hit.gameObject, 0);
-            Destroy(gameObject, 0);
+           // Destroy(hit.gameObject, 0);
+           // Destroy(gameObject, 0);
             Camera.main.GetComponent<LevelHandler>().ResetLevel();
         }
 
         if (hit.transform.name == "Water")
         {
-            Destroy(gameObject, 0);
-
+           // Destroy(gameObject, 0);
+            Camera.main.GetComponent<LevelHandler>().ResetLevel();
         }
 
         Rigidbody rigidBody = hit.collider.attachedRigidbody;
