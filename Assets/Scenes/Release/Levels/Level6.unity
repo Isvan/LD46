@@ -725,7 +725,7 @@ PrefabInstance:
     - target: {fileID: 4721245051415937216, guid: 068e919a1938c8d47adb185ed9b825bf,
         type: 3}
       propertyPath: nextScene
-      value: Level0
+      value: Level7
       objectReference: {fileID: 0}
     - target: {fileID: 4721245051415937216, guid: 068e919a1938c8d47adb185ed9b825bf,
         type: 3}
@@ -5696,6 +5696,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1597614426}
     m_Modifications:
+    - target: {fileID: -7605308110701887188, guid: 6b6056b9cb5aace428c7c54427420076,
+        type: 3}
+      propertyPath: levelNum
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8419656561667021032, guid: 6b6056b9cb5aace428c7c54427420076,
         type: 3}
       propertyPath: field of view
