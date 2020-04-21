@@ -194,7 +194,7 @@ public class player_movement : MonoBehaviour
             Camera.main.GetComponent<LevelHandler>().ResetLevel();
         }
 
-        if (hit.transform.name == "Water")
+        if (hit.transform.tag == "Water")
         {
            // Destroy(gameObject, 0);
             Camera.main.GetComponent<LevelHandler>().ResetLevel();
